@@ -1,0 +1,13 @@
+---
+cyrus_imap::install::cyrus_imap_packages:
+  - cyrus-admin
+  - cyrus-clients
+  - cyrus-common
+  - cyrus-dev
+  - cyrus-doc
+  - cyrus-imapd
+  - cyrus-murder
+  - cyrus-pop3d
+  - cyrus-replication
+  - libcyrus-imap-perl
+  - sa-learn-cyrus
