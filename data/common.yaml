@@ -10,4 +10,3 @@ cyrus_imap::install::cyrus_imap_packages:
   - cyrus-pop3d
   - cyrus-replication
   - libcyrus-imap-perl
-  - sa-learn-cyrus
