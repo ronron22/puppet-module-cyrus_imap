@@ -1,4 +1,4 @@
-class cyrus_imap::services {
+class cyrus_imap::service {
         service { 'cyrus-imapd':
           ensure  => running,
           enable  => true,

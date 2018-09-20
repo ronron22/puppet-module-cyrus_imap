@@ -2,7 +2,7 @@ class cyrus_imap::config (
     $nodename = hiera('nodename'),
     ) {
 
-    include cyrus_imap::services
+    include cyrus_imap::service
 
     file { '/etc/cyrus.conf':
      ensure  => present,
