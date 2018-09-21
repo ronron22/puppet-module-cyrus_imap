@@ -6,7 +6,7 @@ class cyrus_imap::service (
 
 	) inherits cyrus_imap {
 
-		service { $name:
+		service { 'cyrus-imapd':
 			ensure  => $service_status,
 			enable  => $service_enable,
 			restart => "systemctl restart $service_name",
