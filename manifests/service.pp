@@ -1,14 +1,14 @@
 class cyrus_imap::service (
 
-	$name = hiera('name')
-	$enable = hiera('enable')
-	$status = hiera('status')
+	$service_name = hiera('service_name')
+	$service_enable = hiera('service_enable')
+	$service_status = hiera('service_status')
 
 	) inherits cyrus_imap {
 
 		service { $name:
-			ensure  => $status,
-			enable  => $enable,
-			restart => "systemctl restart $name",
+			ensure  => $service_status,
+			enable  => $service_enable,
+			restart => "systemctl restart $service_name",
 		}
 }
