@@ -10,3 +10,8 @@ cyrus_imap::install::cyrus_imap_packages:
   - cyrus-pop3d
   - cyrus-replication
   - libcyrus-imap-perl
+
+cyrus_imap::service::service_name: 'cyrus-imapd'
+cyrus_imap::service::service_enable: true
+cyrus_imap::service::service_status: 'running'
+
