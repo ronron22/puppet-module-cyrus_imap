@@ -1,7 +1,14 @@
-class cyrus_imap::service {
-        service { 'cyrus-imapd':
-          ensure  => running,
-          enable  => true,
-          restart => 'systemctl restart cyrus-imapd',
-        }
+class cyrus_imap::service (
+
+	$name = hiera('name')
+	$enable = hiera('enable')
+	$status = hiera('status')
+
+	) inherits cyrus_imap {
+
+		service { $name:
+			ensure  => $status,
+			enable  => $enable,
+			restart => "systemctl restart $name",
+		}
 }
