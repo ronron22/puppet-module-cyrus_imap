@@ -9,7 +9,7 @@ class cyrus_imap::config (
 		content => file("cyrus_imap/${nodename}/etc/cyrus.conf"),
 		notify   => Service['cyrus-imapd'],  
 	}
-	file { '/etc/imap.conf':
+	file { '/etc/imapd.conf':
 		ensure  => present,
 		content => file("cyrus_imap/${nodename}/etc/imapd.conf"),
 		notify   => Service['cyrus-imapd'],  
